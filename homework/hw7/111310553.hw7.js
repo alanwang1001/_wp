@@ -1,13 +1,10 @@
 import { Application, Router } from "https://deno.land/x/oak/mod.ts";
 import * as render from './render.js';
-
 const posts = [
   { id: 0, title: 'X', body: 'rrrrr', created_at: new Date() },
   { id: 1, title: 'Y', body: 'uuuuu', created_at: new Date() },
 ];
-
 const router = new Router();
-
 router
   .get('/', list)
   .get('/post/new', add)
@@ -25,14 +22,12 @@ async function list(ctx) {
 async function add(ctx) {
   ctx.response.body = await render.newPost();
 }
-
 async function show(ctx) {
   const id = ctx.params.id;
   const post = posts[id];
   if (!post) ctx.throw(404, 'invalid post id');
   ctx.response.body = await render.show(post);
 }
-
 async function create(ctx) {
   const body = ctx.request.body({ type: 'form' });
   const pairs = await body.value;
