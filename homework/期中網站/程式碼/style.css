@@ -1,0 +1,26 @@
+body {
+  font-family: sans-serif;
+  padding: 2rem;
+  background: #fffbe0;
+}
+input {
+  padding: 0.5rem;
+  width: 250px;
+  margin-bottom: 1rem;
+}
+.result {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+.buy {
+  background: #00b900;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  margin-top: 0.5rem;
+  border-radius: 5px;
+}
